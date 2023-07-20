@@ -3,7 +3,7 @@ import ParticlesBg from 'particles-bg'
 const Navigation = () => {
     return (
         <>
-        <div className="navbar flex justify-end w-[80svw] underline cursor-pointer mx-auto">
+        <div className="navbar flex justify-end w-[80svw] underline cursor-pointer mx-auto my-5">
             <p className="text-3xl">Sign-out</p>
         </div>
         <ParticlesBg type="lines" bg={true} />

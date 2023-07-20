@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
+import FaceDetector from './components/FaceDetector/FaceDetector'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,8 +11,8 @@ function App() {
     <>
     <Navigation />
     <Logo />
-    {/* // <Rank />
-    // <FaceDetector /> */}
+    {/* {/* // <Rank /> */}
+    <FaceDetector />
     </>
   )
 }
