@@ -18,11 +18,14 @@ const Logo = () => {
     }
 
   return (
-    <div className="shadow-2xl m-20 mt-0">
+    <div className="m-20 mt-0 flex justify-center md:justify-start">
+      
         <Tilt className="rounded-xl border-2 shadow-2xl bg-slate-200" options={defaultOptions} style={{ height: 150, width: 150 }}>
-            <div className='Tilt-inner flex flex-col'><img src={logo} alt="logo" /><p className='text-center font-extrabold text-xl'>{`<`}lucas{`/>`}</p></div>
-            
+          <a href="https://github.com/lucasknutr" target='_blank'>
+              <div className='Tilt-inner flex flex-col'><img src={logo} alt="logo" /><p className='text-center font-extrabold text-xl'>face<span className='text-pink-400'>detector</span></p></div>
+          </a>
         </Tilt>
+        
     </div>
   );
 };
