@@ -21,13 +21,25 @@ import ParticlesBg from 'particles-bg'
 
 function App() {
 
+    // All of my state updates
+    // Todos os updates de estado
+
   const [ imageURL, setImageURL ] = useState("");
   const [ imageDisplay, setImageDisplay ] = useState('');
   const [ box, setBox ] = useState({});
   const [ route, setRoute ] = useState('login');
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    date: '',
+    id: '',
+    detections: 0
+  })
 
   useEffect(() => {
-    console.log('route: ', route)
+    fetch('http://localhost:3001/')
+        .then(response => response.json())
+        .then(console.log)
   }, [])
 
 
