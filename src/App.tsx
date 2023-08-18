@@ -23,6 +23,9 @@ function App() {
 
     // All of my state updates
     // Todos os updates de estado
+    // ! ATENCAO
+    // todo Update with server link
+
 
   const [ imageURL, setImageURL ] = useState("");
   const [ imageDisplay, setImageDisplay ] = useState('');
@@ -36,11 +39,6 @@ function App() {
     detections: 0
   })
 
-  useEffect(() => {
-    fetch('http://localhost:3001/')
-        .then(response => response.json())
-        .then(console.log)
-  }, [])
 
 
   const calculateFacesLocation = (data: any) => {

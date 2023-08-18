@@ -1,24 +1,21 @@
 import React, { useState } from 'react'
 
-const Register = () => {
+const Register = ({ setRoute }) => {
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
   const handleClick = () => {
     if(name && email && password){
-      fetch('https://localhost:3001/register/', {
-        method: "POST",
-        headers:{
-          "Content-Type": "application/json"
-        },
+      fetch('http://localhost:3001/register', {
+        method: "post",
+        headers:{"Content-Type": "application/json"},
         body: JSON.stringify({
           name: name,
           email: email,
           password: password
-        })
+        }),
 
-      })
-      console.log('SUCCESS');
+      }).then(setRoute('main'))
     } else{
       console.log('perdeu a bdv e a bds :((((');
     }
