@@ -31,7 +31,7 @@ function App() {
   const [ imageDisplay, setImageDisplay ] = useState('');
   const [ box, setBox ] = useState({});
   const [ route, setRoute ] = useState('login');
-  const [user, setUser] = useState({
+  const [ user, setUser ] = useState({
     name: '',
     email: '',
     date: '',
@@ -107,7 +107,7 @@ function App() {
           },
           body: raw
       };
-
+      //testing
       // NOTE: MODEL_VERSION_ID is optional, you can also call prediction with the MODEL_ID only
       // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
       // this will default to the latest version_id
