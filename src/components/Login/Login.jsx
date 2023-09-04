@@ -1,6 +1,25 @@
 import React from 'react'
 
 const Login = ({ setRoute }) => {
+    const handleClick = () => {
+        if(email && password){
+          fetch('http://localhost:3001/register', {
+            method: "post",
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify({
+              email: email,
+              password: password
+            }),
+        })
+        .then(response => 
+            if (email ){
+                setRoute('main')
+            }
+        )
+        .catch(err => console.log('error while trying to sign in: ', err))
+        }
+      }
+    
 
     function handleClickSign (email, pass) {
         // if(d){}
